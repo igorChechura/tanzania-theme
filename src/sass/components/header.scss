@@ -1,0 +1,161 @@
+.header {
+    padding: 10px 0;
+    background-color: $white;
+
+    @include md {
+        padding: 6px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+        @include md {
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {        
+        margin-right: 94px;
+    }
+
+    &__nav-overlay {
+        flex-grow: 1;
+        z-index: 1000;
+
+        @include md {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+
+            &--active {
+                opacity: 1;
+                pointer-events: auto;
+
+                .header__nav-wrap {
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    &__nav-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include md {
+            position: absolute;
+            top: 0;
+            right: -110%;
+            width: 81.9%;
+            flex-direction: column;
+            justify-content: start;
+            max-width: 500px;
+            height: 100%;
+            padding: 67px 20px;
+            background-color: $white;
+            overflow-y: auto;
+            transition: right 0.3s;
+        }
+    }
+
+    &__nav-close {
+        display: none;
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        
+        @include md {
+            display: block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            border-radius: 5px;
+            background-color: #292D32;
+        }
+
+        &::before {
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(-50%,-50%) rotate(135deg);
+        }
+    }
+
+    &__nav {
+        margin-right: 40px;
+
+        @include md {
+            margin: 0 0 51px 0;
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include md {
+            flex-direction: column;
+        }
+    }
+
+    &__nav-item {
+        margin-right: 26px;
+        padding: 5px 0;
+        font-weight: 600;
+        line-height: 136%;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include md {
+            margin: 0 0 40px 0;
+            padding: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__nav-link {
+        text-decoration: none;
+        color: $grey;
+        transition: 0.3s ease;
+
+        &--active,
+        &:hover,
+        &:active {
+            color: $black;
+        }
+    }
+
+    &__menu-button {
+        display: none;
+
+        @include md {
+            display: flex;
+        }
+    }
+}

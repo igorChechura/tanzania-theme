@@ -1,0 +1,19 @@
+.button {
+    display: inline-block;
+    padding: 9px 32px 7px;
+    font-weight: 500;
+    line-height: 136%;
+    color: $white;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &--light {
+        background-color: $white;
+        color: $black;
+    }
+}

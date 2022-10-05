@@ -1,0 +1,18 @@
+{
+    "/assets/scripts/main.js": "/assets/scripts/main.js",
+    "/template-parts/blocks/text-image/text-image.css": "/template-parts/blocks/text-image/text-image.css",
+    "/template-parts/blocks/accordion/accordion.css": "/template-parts/blocks/accordion/accordion.css",
+    "/template-parts/blocks/slider/slider.css": "/template-parts/blocks/slider/slider.css",
+    "/assets/styles/main.css": "/assets/styles/main.css",
+    "/assets/fonts/Inter-Bold.woff2": "/assets/fonts/Inter-Bold.woff2",
+    "/assets/fonts/Inter-Medium.woff2": "/assets/fonts/Inter-Medium.woff2",
+    "/assets/fonts/Inter-Regular.woff2": "/assets/fonts/Inter-Regular.woff2",
+    "/assets/fonts/Inter-SemiBold.woff2": "/assets/fonts/Inter-SemiBold.woff2",
+    "/assets/scripts/main.min.js": "/assets/scripts/main.min.js",
+    "/assets/styles/main.min.css": "/assets/styles/main.min.css",
+    "/template-parts/blocks/slider/slider.min.css": "/template-parts/blocks/slider/slider.min.css",
+    "/template-parts/blocks/slider/slider.min.js": "/template-parts/blocks/slider/slider.min.js",
+    "/template-parts/blocks/accordion/accordion.min.css": "/template-parts/blocks/accordion/accordion.min.css",
+    "/template-parts/blocks/accordion/accordion.min.js": "/template-parts/blocks/accordion/accordion.min.js",
+    "/template-parts/blocks/text-image/text-image.min.css": "/template-parts/blocks/text-image/text-image.min.css"
+}

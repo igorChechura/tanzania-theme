@@ -1,0 +1,127 @@
+.accordion {
+    padding: 108px 0 80px;
+    background-color: #F8F8F8;
+
+    @media screen and (max-width: 992px) {
+        padding: 47px 0 44px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 992px) {
+            display: block;
+        }
+    }
+
+    &__header {
+        width: 40%;
+
+        @media screen and (max-width: 992px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 6px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 136%;
+        color: #737373;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 12px;
+        }
+    }
+
+    &__desc {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 106%;
+        color: #000000;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 36px;
+        }
+    }
+
+    &__content {
+        width: 58%;
+        padding-top: 28px;
+
+        @media screen and (max-width: 992px) {
+            width: 100%;
+            padding-top: 0;
+        }
+    }
+
+    &__item {
+        margin-bottom: 5px;
+        border-bottom: 1px solid #EEEEEE;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__question {
+        position: relative;
+        padding: 15px 30px 20px 0;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 106%;
+        color: #737373;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 18px;
+        }
+
+        &:hover {
+            color: #000000;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 2px;
+            position: absolute;
+            top: calc(50% - 5px);
+            right: 0;
+            border-radius: 5px;
+            background-color: #292D32;
+            transition: all 0.4s;
+        }
+
+        &::after {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__item--active &__question {
+        color: #000000;
+    }
+
+    &__item--active &__question::after {
+        transform: rotate(0deg);
+    }
+    
+    &__answer {
+        display: none;
+        padding: 8px 102px 39px 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 136%;
+        color: #000000;
+
+        @media screen and (max-width: 1200px) {
+            padding-right: 30px;
+            font-size: 14px;
+        }
+    }
+}
